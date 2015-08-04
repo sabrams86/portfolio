@@ -18,8 +18,8 @@ router.post('/send', function (req, res, next) {
     if (err) { console.error(err); }
     console.log(json);
   });
-  // req.flash('info', 'Thank you, your message has been sent')
+  req.flash('info', 'Thank you, your message has been sent');
   res.redirect('/');
-})
+});
 
 module.exports = router;
