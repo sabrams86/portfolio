@@ -14,10 +14,12 @@ router.post('/send', function (req, res, next) {
     subject : req.body.subject,
     text    : req.body.body
   }
+  console.log(payload);
   sendgrid.send(payload, function(err, json) {
     if (err) { console.error(err); }
     console.log(json);
   });
+  console.log('its getting close');
   req.flash('info', 'Thank you, your message has been sent')
   res.redirect('/');
 })
