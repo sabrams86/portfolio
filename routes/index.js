@@ -8,18 +8,18 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/send', function (req, res, next) {
-  // var payload   = {
-  //   to      : process.env.EMAIL,
-  //   from    : req.body.email,
-  //   subject : req.body.subject,
-  //   text    : req.body.body
-  // }
-  // sendgrid.send(payload, function(err, json) {
-  //   if (err) { console.error(err); }
-  //   console.log(json);
-  // });
+  var payload   = {
+    to      : process.env.EMAIL,
+    from    : req.body.email,
+    subject : req.body.subject,
+    text    : req.body.body
+  }
+  sendgrid.send(payload, function(err, json) {
+    if (err) { console.error(err); }
+    console.log(json);
+  });
   req.flash('info', 'Thank you, your message has been sent')
-  res.redirect('/');
+  res.redirect('http://abramswebdevelopment.com');
 })
 
 module.exports = router;
