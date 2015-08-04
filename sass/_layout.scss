@@ -12,3 +12,12 @@
 body {
   padding-bottom: 50px;
 }
+.snippet {
+  width: 33%;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 150px;
+  display: inline-block;
+  padding: 20px;
+}
