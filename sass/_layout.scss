@@ -52,14 +52,14 @@ body {
 .left {
   float: left;
 }
-.col-sm-4 > main {
+.col-xs-4 > main {
   display: block;
   height: 100px;
 }
-.col-sm-4 > footer {
+.col-xs-4 > footer {
   text-align: center;
 }
-.row > footer {
+.col-xs-12 > footer {
   text-align: center;
 }
 // .parallax-background {
