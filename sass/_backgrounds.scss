@@ -1,10 +1,13 @@
 #title {
-  margin-top: 230px;
-  height: 500px;
+  margin-top: 130px;
+  margin-bottom: 100px;
+  height: 100%;
   color: $blue;
   font-weight: 100;
   text-shadow: 1px 1px 2px $offwhite;
   font-size: 1.4em;
+  width: 100%;
+  text-align: center;
 }
 #banner1 {
   padding-top: 50px;
@@ -18,6 +21,7 @@
   text-shadow: 1px 1px 2px $white;
 }
 #banner2 {
+  margin-top: 20px;
   padding-top: 50px;
   background-image: url('./../images/flower.jpeg');
   background-position: center;

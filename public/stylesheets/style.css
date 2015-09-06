@@ -68,7 +68,47 @@ body {
   overflow: hidden;
   min-height: 150px;
   display: inline-block;
-  padding: 20px; }
+  padding: 20px;
+  color: #559e83;
+  font-weight: bold;
+  height: 100%; }
+
+.header-logo {
+  height: 50px;
+  margin: 5px; }
+
+.mini-logo {
+  height: 25px;
+  margin: 5px; }
+
+.gitbutton {
+  background: #559e83; }
+
+.livebutton {
+  background: #1b85b8; }
+
+.flowchart {
+  width: 100%; }
+
+.flowchartsml {
+  width: 300px;
+  float: right; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.col-sm-4 > main {
+  display: block;
+  height: 100px; }
+
+.col-sm-4 > footer {
+  text-align: center; }
+
+.row > footer {
+  text-align: center; }
 
 html {
   font-size: 1em; }
@@ -123,7 +163,7 @@ a:hover {
   text-align: center; }
 
 input, textarea {
-  width: 500px;
+  width: 100%;
   border: 1px solid #090302;
   border-radius: 5px;
   outline: none;
@@ -146,12 +186,15 @@ input:focus, textarea:focus, select:focus {
   border: 2px solid #090302; }
 
 #title {
-  margin-top: 230px;
-  height: 500px;
+  margin-top: 130px;
+  margin-bottom: 100px;
+  height: 100%;
   color: #1b85b8;
   font-weight: 100;
   text-shadow: 1px 1px 2px #FFF8F0;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  width: 100%;
+  text-align: center; }
 
 #banner1 {
   padding-top: 50px;
@@ -165,6 +208,7 @@ input:focus, textarea:focus, select:focus {
   text-shadow: 1px 1px 2px #fff; }
 
 #banner2 {
+  margin-top: 20px;
   padding-top: 50px;
   background-image: url("./../images/flower.jpeg");
   background-position: center;

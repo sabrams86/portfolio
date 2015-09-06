@@ -1,86 +1,286 @@
 extends layout
 block content
-  div.banner#title
+  .parallax-content
+    .banner#title
+      .container
+        .section
+          h1 Steve Abrams
+          .logo-collection
+            img.header-logo(src='/images/javascript_logo.png')
+            img.header-logo(src='/images/node_js_logo.png')
+            img.header-logo(src='/images/ruby-logo.png')
+            img.header-logo(src='/images/rails_logo.png')
+            img.header-logo(src='/images/angular_logo.png')
+            img.header-logo(src='/images/react_logo.png')
+            img.header-logo(src='/images/mongo_leaf.png')
+            img.header-logo(src='/images/postgresql.png')
+            img.header-logo(src='/images/HTML5_Badge_512.png')
+            img.header-logo(src='/images/sass-logo-new.png')
+            img.header-logo(src='/images/jasmine_logo.png')
+            img.header-logo(src='/images/gulp-2x.png')
+            img.header-logo(src='/images/bower_logo.png')
+            img.header-logo(src='/images/jquery_logo.gif')
+            img.mini-logo(src='/images/bootstrap-logo.png')  
+            img.header-logo(src='/images/GitHub-Mark.png')
+          h3 Web Development and the Whole Stack
+          if info
+            h4.info= info
+  .parallax-background
+    .banner#banner1    
+      .container
+        .section
+          h2 My Portfolio
+          h4.hidden-xs I believe that user experience is everything.  The most advanced site in the world is useless if no one wants to use it.
+  .parallax-section
     .container
       .section
-        h1 Steve Abrams
-        h3 Web Development and the Whole Stack
-        if info
-          h4.info= info
-  div.banner#banner1    
+        div.portfolio
+          h3 Check out my code at 
+            a(href='https://github.com/sabrams86' target='_blank') github
+          .row
+            .col-sm-12
+              header
+                h3 Double Back End
+                img.mini-logo(src='/images/javascript_logo.png')
+                img.mini-logo(src='/images/node_js_logo.png')
+                img.mini-logo(src='/images/ruby-logo.png')
+                img.mini-logo(src='/images/rails_logo.png')
+                img.mini-logo(src='/images/angular_logo.png')
+                img.mini-logo(src='/images/mongo_leaf.png')
+                img.mini-logo(src='/images/gulp-2x.png')
+              a(href="#" data-toggle="modal" data-target="#myModal")
+                img.flowchartsml(src='/images/flow.png')
+              main
+                p An experiment with Angular, Rails, and Expressjs.  Two identical angular front ends deployed statically to Amazon S3.  One talks to a Rails API backend, another to an Expressjs API (Node.js) backend.  Both backends hook into the same MongoDB.  Click the figure above to see how everthing is hooked up. 
+              footer
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#teamodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/angular-cart' target='_blank') Angular GitHub 
+                | 
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/rails-shopping-cart' target='_blank') Rails GitHub
+                | 
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/mean-shopping-cart' target='_blank') Express GitHub
+                a.btn.btn-info.right.livebutton(href='http://rails-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Rails Site  
+                .right &nbsp;
+                a.btn.btn-info.right.livebutton(href='http://angular-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Express Site  
+          .row  
+            .col-sm-4
+              header
+                h3 TeleComics
+                img.mini-logo(src='/images/javascript_logo.png')
+                img.mini-logo(src='/images/node_js_logo.png')
+                img.mini-logo(src='/images/mongo_leaf.png')
+                img.mini-logo(src='/images/sass-logo-new.png')
+                img.mini-logo(src='/images/jquery_logo.gif')
+                img.mini-logo(src='/images/bootstrap-logo.png')
+              main
+                p Make a comic and send it to your friends, but first it'll get translated to five different languages and back to english!
+              footer  
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#telemodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/telecomics' target='_blank') GitHub
+                a.btn.btn-info.right.livebutton(href='https://protected-waters-5312.herokuapp.com/' target='_blank') Live Site
+            .col-sm-4
+              header
+                h3 Gear Trader
+                img.mini-logo(src='/images/javascript_logo.png')
+                img.mini-logo(src='/images/node_js_logo.png')
+                img.mini-logo(src='/images/mongo_leaf.png')
+                img.mini-logo(src='/images/sass-logo-new.png')
+                img.mini-logo(src='/images/bower_logo.png')
+                img.mini-logo(src='/images/jquery_logo.gif')
+              main
+                p A site demonstrating complex associations using Express and MongoDB
+              footer
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#gearmodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/friendlygear' target='_blank') GitHub
+                a.btn.btn-info.right.livebutton(href='http://friendlygear.abramswebdevelopment.com/' target='_blank') Live Site
+            .col-sm-4
+              header
+                h3 FlashCodes
+                img.mini-logo(src='/images/javascript_logo.png')
+                img.mini-logo(src='/images/node_js_logo.png')
+                img.mini-logo(src='/images/mongo_leaf.png')
+                img.mini-logo(src='/images/jasmine_logo.png')
+                img.mini-logo(src='/images/jquery_logo.gif')
+                img.mini-logo(src='/images/bootstrap-logo.png')
+              main
+                p A site for creating and playing quizzes
+              footer
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#quizmodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/quizbuilder' target='_blank') GitHub
+                a.btn.btn-info.right.livebutton(href='http://flashcodes.abramswebdevelopment.com/' target='_blank') Live Site
+          .row              
+            .col-sm-4
+              header
+                h3 Squirrel
+                img.mini-logo(src='/images/javascript_logo.png')
+                img.mini-logo(src='/images/node_js_logo.png')
+                img.mini-logo(src='/images/mongo_leaf.png')
+              main  
+                p Help Squirrel get back to his home at the top of the tree
+              footer
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#squirrelmodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/squirrel' target='_blank') GitHub
+                a.btn.btn-info.right.livebutton(href='http://squirrel.abramswebdevelopment.com/' target='_blank') Live Site
+            .col-sm-4
+              header
+                h3 Javascipt Filters
+                img.mini-logo(src='/images/javascript_logo.png')
+                img.mini-logo(src='/images/node_js_logo.png')
+                img.mini-logo(src='/images/mongo_leaf.png')
+              main
+                p A proof of concept project centered around filtering with AJAX calls 
+              footer  
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#jsmodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/js-filter' target='_blank') GitHub
+                a.btn.btn-info.right.livebutton(href='http://js-filter.abramswebdevelopment.com/' target='_blank') Live Site
+            .col-sm-4
+              header
+                h3 API Demo
+                img.mini-logo(src='/images/javascript_logo.png')
+              main
+                p A proof of concept project centered around API calls
+              footer
+                a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#apimodal") Preview
+                a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/api-demo' target='_blank') GitHub
+                a.btn.btn-info.right.livebutton(href='http://api-demo.abramswebdevelopment.com/' target='_blank') Live Site
+    div.banner#banner2
+      .container
+        h2 About Me
+        h4 Hobbiest Turned Professional
     .container
-      .section
-        h2 My Portfolio
-        h4 I believe that user experience is everything.  The most advanced site in the world is useless if no one wants to use it.
-  .container
-    .section
-      div.portfolio
-        h3 Check out my code at 
-          a(href='https://github.com/sabrams86' target='_blank') github
-        a(href='https://protected-waters-5312.herokuapp.com/' target='_blank')
-          .snippet
-            h3 TeleComics
-            p Make a comic and send it to your friends, but first it'll get translated to five different languages and back to english!
-        a(href='http://friendlygear.abramswebdevelopment.com/' target='_blank')
-          .snippet
-            h3 FriendlyGear
-            p Rent outdoor gear or rent out your own gear to others
-        a(href='http://flashcodes.abramswebdevelopment.com/' target='_blank')
-          .snippet
-            h3 FlashCodes
-            p A site for creating and playing quizzes
-        a(href='http://squirrel.abramswebdevelopment.com/' target='_blank')
-          .snippet
-            h3 Squirrel
-            p Help Squirrel get back to his home at the top of the tree
-        a(href='http://js-filter.abramswebdevelopment.com/' target='_blank')
-          .snippet
-            h3 Javascipt Filters
-            p A proof of concept project centered around filtering with AJAX calls
-        a(href='http://api-demo.abramswebdevelopment.com/' target='_blank')
-          .snippet
-            h3 API Demo
-            p A proof of concept project centered around API calls
-  div.banner#banner2
-    .container
-      h2 About Me
-      h4 Hobbiest Turned Professional
-  .container
-    div.about
-      p I used to be an engineer.  One day I found myself wanting to help my company re-organize their data by implementing a new database system.  After some research and advice from a friend, I decided to try to implement a web based database using Ruby on Rails.
-      p I spent all of my free time on nights and weekends learning the basics and going through all sorts of tutorials I finally was able to successfully build the 
-        a(href='https://github.com/sabrams86/engdb' target='_blank') database 
-        | and deploy it locally on the company's network.  Over the next year I realized that my favorite thing I had ever worked on (professionally or academically) was building the database.
-      p A friend told me about 
-        a(href='http://www.galvanize.com/' target='_blank') Galvanize 
-        | and said I should check out their 24 week Full Stack program.  I decided that the timing was right, so I applied, was accepted and am graduating from the full stack program in October 2015 at which point I will be trained for Junior to Mid-level full stack jobs using MEAN (MongoDB, Expressjs, Angular, Nginx) and Rails (PosgreSQL, Rails, React, Apache) stacks.
-      p I absolutely love the tech scene and try my best to keep of with the hottest trends, gadgets, and happenings in the tech community.  I frequent the Denver Ruby and Node.js meetups, as well as participating in other Galvanize and tech community events.
-  div.banner#banner3
-    .container
-      h2 Contact Me
-      h4 Let's chat
-  .container      
-    div.contact
-      a(href='/')
-      h3 Connect with me at 
-        a(href='https://www.linkedin.com/in/stevenabrams86' target='_blank') Linkedin
-      h4 or feel free to send me a message here:
-      form.contactform(method='post' action='/send')
+      div.about
+        p I used to be an engineer.  One day I found myself wanting to help my company re-organize their data by implementing a new database system.  After some research and advice from a friend, I decided to try to implement a web based database using Ruby on Rails.
+        p I spent all of my free time on nights and weekends learning the basics and going through all sorts of tutorials I finally was able to successfully build the 
+          a(href='https://github.com/sabrams86/engdb' target='_blank') database 
+          | and deploy it locally on the company's network.  Over the next year I realized that my favorite thing I had ever worked on (professionally or academically) was building the database.
+        p A friend told me about 
+          a(href='http://www.galvanize.com/' target='_blank') Galvanize 
+          | and said I should check out their 24 week Full Stack program.  I decided that the timing was right, so I applied, was accepted, and am graduating from the full stack program in October 2015 at which point I will be trained for Junior to Mid-level full stack jobs using MEAN (MongoDB, Expressjs, Angular, Nginx) and Rails (PosgreSQL, Rails, React, Apache) stacks.
+        p I absolutely love the tech scene and try my best to keep of with the hottest trends, gadgets, and happenings in the tech community.  I frequent the Denver Ruby and Node.js meetups, as well as participating in other Galvanize and tech community events.
+    div.banner#banner3
+      .container
+        h2 Contact Me
+        h4 Let's chat
+    .container      
+      div.contact
+        a(href='/')
+        h3 Connect with me at 
+          a(href='https://www.linkedin.com/in/stevenabrams86' target='_blank') Linkedin
+        h4 or feel free to send me a message here:
         .row
-          label(for='name') Your Name
-        .row
-          input#name(type='text' name='name')
-        .row
-          label(for='email') Your Email
-        .row
-          input#email(type='text' name='email')
-        .row
-          label(for='subject') Subject
-        .row
-          input#subject(type='text' name='subject')
-        .row
-          label(for='body') Message
-        .row
-          textarea#body(name='body' rows='8')
-        .row
-          button#emailbutton(type='submit') Send
+          form.contactform.col-sm-6.col-sm-offset-3(method='post' action='/send')
+            .row
+              label(for='name') Your Name
+            .row
+              input#name(type='text' name='name')
+            .row
+              label(for='email') Your Email
+            .row
+              input#email(type='text' name='email')
+            .row
+              label(for='subject') Subject
+            .row
+              input#subject(type='text' name='subject')
+            .row
+              label(for='body') Message
+            .row
+              textarea#body(name='body' rows='8')
+            .row
+              button#emailbutton(type='submit') Send
+          
+
+  <!-- double backend Modal -->
+  div(class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/flow.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+          
+  <!-- mean tea Modal -->
+  div(class="modal fade" id="teamodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/meantea.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+
+  <!-- telecomics Modal -->
+  div(class="modal fade" id="telemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/telecomics.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+
+  <!-- friendlygear Modal -->
+  div(class="modal fade" id="gearmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/gear.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+
+  <!-- flashcodes Modal -->
+  div(class="modal fade" id="quizmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/quiz.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+
+  <!-- js-filter Modal -->
+  div(class="modal fade" id="jsmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/js.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+
+  <!-- squirrel Modal -->
+  div(class="modal fade" id="squirrelmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/squirrel.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
+
+  <!-- api-demo Modal -->
+  div(class="modal fade" id="apimodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          img.flowchart(src='/images/api.png')
+        .modal-footer
+          button(type="button" class="btn btn-default" data-dismiss="modal") Close
