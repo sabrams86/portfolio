@@ -100,15 +100,25 @@ body {
 .left {
   float: left; }
 
-main {
+.col-xs-12 > main, .col-md-4 > main {
   display: block;
-  height: 100px; }
+  min-height: 100px; }
 
 footer {
   text-align: center; }
 
-.col-xs-12 > main {
-  height: 100%; }
+.modal-body iframe {
+  display: inline; }
+
+.modal-body {
+  text-align: center;
+  margin: 0; }
+
+.modal-content {
+  width: 520px; }
+
+.modal-header span {
+  font-size: 1.5em; }
 
 html {
   font-size: 1em; }

@@ -3,7 +3,9 @@ var router = express.Router();
 var db = require('./../models');
 //index
 router.get('/posts', function (req, res, next) {
-  res.render('posts/index');
+  db.Posts.find({}).then(function (posts) {
+    res.render('posts/index');
+  });
 })
 //new
 router.get('/posts/new', function (req, res, next) {
