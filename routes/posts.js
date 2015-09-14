@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var db = require('./../models');
+var bcrypt = require('bcryptjs');
+var db = require('./../models');
 //index
 router.get('/posts', function (req, res, next) {
   db.Posts.find({}).then(function (posts) {
@@ -9,7 +11,13 @@ router.get('/posts', function (req, res, next) {
 })
 //new
 router.get('/posts/new', function (req, res, next) {
-  res.render('posts/new');
+  if (req.session.adminId){
+    db.Users.findById(req.session.adminId).then(function (user) {
+      res.render('posts/new');
+    })
+  } else {
+    res.redirect('/');
+  }
 })
 // //show
 // router.get('/posts/:id', function (req, res, next) {
