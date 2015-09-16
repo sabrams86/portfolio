@@ -52,16 +52,25 @@ block content
                 img.flowchartsml(src='/images/flow.png')
               main
                 p An experiment with Angular, Rails, and Expressjs.  Two identical angular front ends deployed statically to Amazon S3.  One talks to a Rails API backend, another to an Expressjs API (Node.js) backend.  Both backends hook into the same MongoDB.  Click the figure above to see how everthing is hooked up. 
-              footer
+              footer.hidden-xs
                 a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#teamodal") Preview
                 a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/angular-cart' target='_blank') Angular GitHub 
                 | 
                 a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/rails-shopping-cart' target='_blank') Rails GitHub
                 | 
                 a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/mean-shopping-cart' target='_blank') Express GitHub
-                a.btn.btn-info.right.livebutton(href='http://rails-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Rails Site  
+                a.btn.btn-info.livebutton.right(href='http://rails-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Rails Site  
                 .right &nbsp;
-                a.btn.btn-info.right.livebutton(href='http://angular-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Express Site  
+                a.btn.btn-info.livebutton.right(href='http://angular-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Express Site  
+              footer.hidden-sm.hidden-md.hidden-lg
+                .btn-row
+                  a.btn.btn-sm.btn-danger.left(href="#" data-toggle="modal" data-target="#teamodal") Preview
+                  a.btn.btn-sm.btn-info.livebutton(href='http://rails-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Rails Site  
+                  a.btn.btn-sm.btn-info.livebutton.right(href='http://angular-cart.s3-website-us-west-2.amazonaws.com' target='_blank') Express Site  
+                .btn-row
+                  a.btn.btn-sm.btn-primary.gitbutton.left(href='https://github.com/sabrams86/angular-cart' target='_blank') Angular GitHub 
+                  a.btn.btn-sm.btn-primary.gitbutton(href='https://github.com/sabrams86/rails-shopping-cart' target='_blank') Rails GitHub
+                  a.btn.btn-sm.btn-primary.gitbutton.right(href='https://github.com/sabrams86/mean-shopping-cart' target='_blank') Express GitHub      
           .row  
             .col-md-4.col-xs-12
               header
@@ -189,12 +198,12 @@ block content
               button#emailbutton(type='submit') Send
           
 
-  <!-- double backend Modal -->
+  <!-- double backend flow chart Modal -->
   div(class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
     .modal-dialog(role="document")
       .modal-content
         .modal-body
-          iframe(width="480" height="360" src="https://www.youtube.com/embed/rlbXODIxK5E" frameborder="0" allowfullscreen)
+          img.flowchart(src='/images/flow.png')
         .modal-footer
           button(type="button" class="btn btn-default" data-dismiss="modal") Close
           

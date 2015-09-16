@@ -120,6 +120,11 @@ footer {
 .modal-header span {
   font-size: 1.5em; }
 
+.btn-row {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%; }
+
 html {
   font-size: 1em; }
 

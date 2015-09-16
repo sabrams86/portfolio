@@ -3,10 +3,15 @@ var router = express.Router();
 var db = require('./../models');
 var bcrypt = require('bcryptjs');
 var db = require('./../models');
+
+router.get('/blog', function (req, res, next) {
+  res.render('posts/blog');
+})
 //index
 router.get('/posts', function (req, res, next) {
+  console.log('------------------------------------------------');
   db.Posts.find({}).then(function (posts) {
-    res.render('posts/index');
+    res.json(posts);
   });
 })
 //new
@@ -26,15 +31,15 @@ router.get('/posts/new', function (req, res, next) {
 //   });
 // })
 // //create
-// router.post('/posts', function (req, res, next) {
-//   db.Posts.create({
-//     title: req.body.title,
-//     body: req.body.title,
-//     date: req.body.date
-//   }).then(function (post) {
-//     res.redirect('/posts/' + post._id);
-//   })
-// })
+router.post('/posts', function (req, res, next) {
+  db.Posts.create({
+    title: req.body.title,
+    body: req.body.body,
+    date: req.body.date
+  }).then(function (post) {
+    res.redirect('/posts');
+  })
+})
 // //edit
 // router.get('/posts/:id/edit', function (req, res, next) {
 //   db.Posts.findById(req.params.id).then(function (post) {
