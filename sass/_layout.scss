@@ -52,7 +52,7 @@ body {
 .left {
   float: left;
 }
-.col-xs-12 > main, .col-md-4 > main {
+.project > main {
   display: block;
   min-height: 100px;
 }
@@ -81,28 +81,18 @@ footer {
   width: 100%;
 }
 
-// .parallax-background {
-// 	height: 420px;
-//   position: absolute;
-//   position-y: -420px;
-// 	background-repeat: no-repeat;
-// 	-webkit-background-size: cover;
-//   	-moz-background-size: cover;
-//   	-o-background-size: cover;
-// 	background-size: cover;
-// 	width: 100%;
-// }
-// .parallax-header {
-// 	max-width: 100%;
-// 	position: relative;
-// 	top: 0px;
-// 	font-size: 20px;
-// 	background-color: #fff;
-// }
-// .parallax-section {
-// 	max-width: 100%;
-// 	position: relative;
-// 	top: 1000px;
-// 	font-size: 20px;
-// 	background-color: #fff;
-// }
+.project {
+  h3{
+    margin-top:0;
+  }
+  background: #efefef;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 10px 0;
+}
+.project:hover {
+  box-shadow: 2px 2px #dddddd;
+}
+.row .project:nth-child(2){
+  margin: 0 10px;
+}
