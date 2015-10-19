@@ -41,6 +41,26 @@ block content
             .col-md-4.col-xs-12
               .project
                 header
+                  h3 FriendlyGear
+                  img.mini-logo(src='/images/javascript_logo.png')
+                  img.mini-logo(src='/images/node_js_logo.png')
+                  img.mini-logo(src='/images/angular_logo.png')
+                  img.mini-logo(src='/images/mongo_leaf.png')
+                  img.mini-logo(src='/images/sass-logo-new.png')
+                  img.mini-logo(src='/images/jasmine_logo.png')
+                  img.mini-logo(src='/images/gulp-2x.png')
+                  img.mini-logo(src='/images/bower_logo.png')
+                  img.mini-logo(src='/images/jquery_logo.gif')
+                  img.mini-logo(src='/images/bootstrap-logo.png')  
+                main
+                  p Rent your outdoor gear to others or rent gear from others.  Think Craigslist meeets AirBnB for backpacking and outdoor activities!
+                footer  
+                  a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#fgmodal") Preview
+                  a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/fg' target='_blank') GitHub
+                  a.btn.btn-info.right.livebutton(href='http://www.friendlygear.com/' target='_blank') Live Site
+            .col-md-4.col-xs-12
+              .project
+                header
                   h3 RoadTrip
                   img.mini-logo(src='/images/ruby-logo.png')
                   img.mini-logo(src='/images/rails_logo.png')
@@ -55,26 +75,6 @@ block content
                   a.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#roadtripmodal") Preview
                   a.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/road-trip-back-end' target='_blank') GitHub
                   a.btn.btn-info.right.livebutton(href='http://roadtrip.abramswebdevelopment.com/' target='_blank') Live Site
-            .col-md-4.col-xs-12
-              .project
-                header
-                  h3 FriendlyGear
-                  img.mini-logo(src='/images/javascript_logo.png')
-                  img.mini-logo(src='/images/node_js_logo.png')
-                  img.mini-logo(src='/images/angular_logo.png')
-                  img.mini-logo(src='/images/mongo_leaf.png')
-                  img.mini-logo(src='/images/sass-logo-new.png')
-                  img.mini-logo(src='/images/jasmine_logo.png')
-                  img.mini-logo(src='/images/gulp-2x.png')
-                  img.mini-logo(src='/images/bower_logo.png')
-                  img.mini-logo(src='/images/jquery_logo.gif')
-                  img.mini-logo(src='/images/bootstrap-logo.png')  
-                main
-                  p (In Progress) Rent your outdoor gear to others or rent gear from others.  Think Craigslist meeets AirBnB for backpacking and outdoor activities!
-                footer  
-                  a.disabled.btn.btn-danger.left(href="#" data-toggle="modal" data-target="#gearmodal") Preview
-                  a.disabled.btn.btn-primary.gitbutton(href='https://github.com/sabrams86/friendlygear' target='_blank') GitHub
-                  a.disabled.btn.btn-info.right.livebutton(href='http://friendlygear.abramswebdevelopment.com/' target='_blank') Live Site
             .col-md-4.col-xs-12
               .project
                 header
@@ -242,14 +242,24 @@ block content
               textarea#body(name='body' rows='8')
             .row
               button#emailbutton(type='submit') Send
+  
+  <!-- fg Modal -->
+  div(class="modal fade" id="fgmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-body
+          iframe(width="480" height="360" src="https://www.youtube-nocookie.com/embed/sC0bBjGLkFU" frameborder="0" allowfullscreen)
+        .modal-footer
+          .hidden-xs.button(type="button" class="stop-video btn btn-default" data-dismiss="modal") Close
+          .hidden-sm.hidden-md.hidden-lg.left.button(type="button" class="stop-video btn btn-default" data-dismiss="modal") Close
+
             
   <!-- roadtrip Modal -->
   div(class="modal fade" id="roadtripmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
     .modal-dialog(role="document")
       .modal-content
         .modal-body
-          img(src='/images/roadtrip.png' width='480')
-          //- iframe(width="480" height="360" src="https://www.youtube.com/embed/rlbXODIxK5E" frameborder="0" allowfullscreen)
+          iframe(width="480" height="360" src="https://www.youtube-nocookie.com/embed/B9KuEGWKYQM" frameborder="0" allowfullscreen)
         .modal-footer
           .hidden-xs.button(type="button" class="stop-video btn btn-default" data-dismiss="modal") Close
           .hidden-sm.hidden-md.hidden-lg.left.button(type="button" class="stop-video btn btn-default" data-dismiss="modal") Close
